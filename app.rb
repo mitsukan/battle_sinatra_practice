@@ -1,13 +1,6 @@
 require 'sinatra'
 
 get '/' do
-  "hello world"
-end
-
-get '/secret' do
-  "miaow"
-end
-
-get '/cat' do
-erb(:index)
+  @name = ["Bob", "Sam", "Brian"].sample
+  erb(:index)
 end
